@@ -5,6 +5,7 @@ import (
 	"fmt"
 	"log"
 	"net/http"
+	"runtime"
 
 	"github.com/gorilla/websocket"
 	jsoniter "github.com/json-iterator/go"
@@ -87,6 +88,7 @@ func handleOperations(conn *websocket.Conn) {
 			}
 
 			result = ScanFoldersResult{}
+			runtime.GC()
 		}
 	}
 }
