@@ -85,6 +85,8 @@ func handleOperations(conn *websocket.Conn) {
 			if err != nil {
 				log.Println("Error sending JSON response")
 			}
+
+			result = ScanFoldersResult{}
 		}
 	}
 }
